@@ -23,6 +23,8 @@ class MainActivity : AppCompatActivity() {
 	private fun rollDice() {
 		// Create new Dice object with 6 sides and roll it
 		val dice = Dice(6)
+		
+		// Do a dice roll when the app start
 		val diceRoll = dice.roll()
 		
 		// Update the screen with the dice roll
