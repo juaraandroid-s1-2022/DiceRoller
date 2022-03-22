@@ -31,7 +31,24 @@ class MainActivity : AppCompatActivity() {
 		
 		// Update the screen with the image of dice roll number 2
 		val diceImage: ImageView = findViewById(R.id.imageView)
-		diceImage.setImageResource(R.drawable.dice_2)
+		// diceImage.setImageResource(R.drawable.dice_2)
+		
+		// Adding logic
+		val drawableResource = when (diceRoll) {
+			1 -> R.drawable.dice_1
+			2 -> R.drawable.dice_2
+			3 -> R.drawable.dice_3
+			4 -> R.drawable.dice_4
+			5 -> R.drawable.dice_5
+			// need to add else to use when
+			else -> R.drawable.dice_6
+		}
+		
+		// set the image resource
+		diceImage.setImageResource(drawableResource)
+		
+		// set the content description
+		diceImage.contentDescription = diceRoll.toString()
 	}
 }
 
