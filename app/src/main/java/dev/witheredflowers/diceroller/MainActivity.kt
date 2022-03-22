@@ -1,30 +1,28 @@
 package dev.witheredflowers.diceroller
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
-import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 		setContentView(R.layout.activity_main)
-
+		
 		// Find the button
-		val rollButton: Button = findViewById(R.id.button);
-
+		val rollButton: Button = findViewById(R.id.button)
+		
 		// Set the onClickListener for the Button
 		rollButton.setOnClickListener { rollDice() }
 	}
-
-    /**
-     * Roll the dice and update the screen with the result.
-     */
+	
+	/**
+	 * Roll the dice and update the screen with the result.
+	 */
 	private fun rollDice() {
 		// Create new Dice object with 6 sides and roll it
-		val dice = Dice(6);
+		val dice = Dice(6)
 		val diceRoll = dice.roll()
 		
 		// Update the screen with the dice roll
